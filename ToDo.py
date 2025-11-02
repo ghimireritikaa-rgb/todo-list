@@ -15,12 +15,12 @@ while True:
     if choice == '1':
         task = input("Enter a new task: ")
         tasks.append(task)
-        print(f"✅ '{task}' has been added to your to-do list.")
+        print(f" '{task}' has been added to your to-do list.")
 
     elif choice == '2':
         print("\nYour Tasks:")
         if not tasks:
-            print("No tasks yet! 🎉")
+            print("No tasks yet! ")
         else:
             for i, task in enumerate(tasks, start=1):
                 print(f"{i}. {task}")
@@ -32,13 +32,14 @@ while True:
         try:
             task_num = int(input("Enter the task number: "))
             removed = tasks.pop(task_num - 1)
-            print(f"❌ '{removed}' has been removed.")
+            print(f" '{removed}' has been removed.")
         except (ValueError, IndexError):
-            print("⚠️ Invalid number, please try again.")
+            print(" Invalid number, please try again.")
 
     elif choice == '4':
-        print("Goodbye! 👋")
+        print("Goodbye! ")
         break
 
     else:
-        print("⚠️ Please enter a number between 1 and 4.")
+        print(" Please enter a number between 1 and 4.")
+
